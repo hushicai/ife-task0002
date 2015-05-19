@@ -232,6 +232,7 @@ var caf = window.cancelAnimationFrame
         clearTimeout(id);
     };
 
+// 缓动函数
 var easing = {
     linear: function (t) {
         return t;
