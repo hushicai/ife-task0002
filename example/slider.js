@@ -3,6 +3,8 @@
  * @author hushicai(bluthcy@gmail.com)
  */
 
+/* global SlideEffect, Slider*/
+
 var effect = new SlideEffect({
     duration: 1000
 });

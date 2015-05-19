@@ -1,3 +1,8 @@
+/**
+ * @file test dom
+ * @author hushicai(bluthcy@gmail.com)
+ */
+
 function test(selector) {
     console.log('"' + selector + '"', $(selector));
 }

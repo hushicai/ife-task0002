@@ -78,13 +78,7 @@ function isSiblingNode(element, siblingNode) {
  */
 function getPosition(element) {
     var box = element.getBoundingClientRect();
-    var st = Math.max(document.documentElement.scrollTop, document.body.scrollTop);
-    var sl = Math.max(document.documentElement.scrollLeft, document.body.scrollLeft);
-
-    return {
-        left: box.left + sl,
-        top: box.top + st
-    };
+    return box;
 }
 
 /**

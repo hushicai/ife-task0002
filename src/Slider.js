@@ -5,6 +5,7 @@
 
 // 这里没有用到css3 transition，使用js来实现动画效果
 // 当然，你也可以修改下面的SlideEffect类，将它改成css3的
+// 这个轮播组件当然还不是很完善，比如轮播方向、防止快速点击等功能。
 
 // 复制
 function extend(target, source) {
@@ -108,6 +109,7 @@ var Slider = function (options) {
         }
     }, false);
 
+    // 不能直接使用mouseover、mouseout，当内部存在子元素时，mouseover、mouseout会触发多次。
     // 自己模拟mouseenter、mouseout，符合w3c规范
     // 实际应用中，可以使用jquery等库
     var main = this._main;
@@ -309,6 +311,7 @@ var SlideEffect = function (options) {
     Animation.call(this, options);
 };
 
+// 切换到指定index
 SlideEffect.prototype.switchTo = function (index, lastIndex) {
     var slider = this.target;
     var items = slider._items;
@@ -322,6 +325,7 @@ SlideEffect.prototype.switchTo = function (index, lastIndex) {
     if (nextItem) {
         addClass(nextItem, itemNextClass);
     }
+    // 当只指定了一个index参数时，不播放动画
     if (index === undefined || lastIndex === undefined) {
         return this;
     }
@@ -345,6 +349,7 @@ SlideEffect.prototype.switchTo = function (index, lastIndex) {
     return this;
 };
 
+// 绘制dom元素
 SlideEffect.prototype.draw = function (percent) {
     var slider = this.target;
     var delta = (this.to - this.from) * percent;
@@ -358,3 +363,6 @@ SlideEffect.prototype.draw = function (percent) {
 };
 
 inherits(SlideEffect, Animation);
+
+// 如果你想用其他轮播效果，比如淡入、淡出等，你可以自己实现一个类，继承自Animation。
+// 然后以参数的形式传递给Slider即可。
