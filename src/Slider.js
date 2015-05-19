@@ -3,6 +3,9 @@
  * @author hushicai(bluthcy@gmail.com)
  */
 
+// 依赖于src/dom.js
+
+
 // 这里没有用到css3 transition，使用js来实现动画效果
 // 当然，你也可以修改下面的SlideEffect类，将它改成css3的，你要是想兼容js和css3也可以...
 // 这个轮播组件当然还不是很完善，比如轮播方向、防止快速点击等功能。
