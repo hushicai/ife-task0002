@@ -1,0 +1,32 @@
+{
+  "name": "ife-task0002",
+  "version": "1.0.0",
+  "description": "ife task0002 review",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc",
+    "test": "test"
+  },
+  "dependencies": {
+    "jasmine-core": "^2.3.4",
+    "karma-coverage": "^0.3.1",
+    "karma-jasmine": "^0.3.5",
+    "karma": "^0.12.31",
+    "karma-mocha-reporter": "^1.0.2",
+    "karma-phantomjs-launcher": "^0.1.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "karma start test/config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hushicai/ife-task0002.git"
+  },
+  "author": "hushicai <bluthcy@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hushicai/ife-task0002/issues"
+  },
+  "homepage": "https://github.com/hushicai/ife-task0002"
+}
