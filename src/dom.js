@@ -85,7 +85,8 @@ function getPosition(element) {
 /**
  * mini $
  *
- * @return {HTMLElement} 返回第一个匹配的元素
+ * @param {string} selector 选择器
+ * @return {Array.<HTMLElement>} 返回匹配的元素列表
  */
 function $(selector) {
     var idReg = /^#([\w_\-]+)/;
