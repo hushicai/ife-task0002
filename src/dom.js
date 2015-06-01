@@ -71,7 +71,8 @@ function isSiblingNode(element, siblingNode) {
 }
 
 /**
- * 获取元素相对于文档左上角的位置
+ * 获取元素相对于浏览器窗口左上角的位置
+ * 注意：不是文档左上角，如果是相对于文档左上角，还需要加上scrollTop、scrollLeft
  *
  * @param {HTMLElement} element 元素
  * @return {Object} 位置
